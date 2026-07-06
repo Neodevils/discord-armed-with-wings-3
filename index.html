@@ -118,23 +118,6 @@
         background: rgba(255, 255, 255, 0.14);
       }
 
-      .hint {
-        position: fixed;
-        left: max(12px, env(safe-area-inset-left));
-        bottom: max(12px, env(safe-area-inset-bottom));
-        z-index: 10;
-        max-width: min(520px, calc(100vw - 24px));
-        padding: 8px 10px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--panel);
-        color: var(--muted);
-        font-size: 12px;
-        line-height: 1.35;
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-      }
-
       .is-hidden {
         display: none;
       }
@@ -148,7 +131,6 @@
       <span class="status"><span id="statusDot" class="dot"></span><span id="statusText">Loading</span></span>
       <button id="fullscreenButton" type="button">Fullscreen</button>
     </div>
-    <div id="hint" class="hint">Progress is saved by Ruffle in this browser or Discord Activity session.</div>
     <script type="module" src="./app.js"></script>
   </body>
 </html>

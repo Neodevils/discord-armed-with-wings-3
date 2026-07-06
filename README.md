@@ -14,7 +14,8 @@ Open `http://localhost:5173`.
 
 - The app is single-player.
 - Ruffle stores Flash SharedObject save data in persistent browser storage, so progress survives normal reloads for the same browser or Discord Activity origin.
-- `app.js` includes Discord Activity detection and a lightweight Activity status update path.
+- `app.js` uses the same Discord RPC status flow as the Fireboy/Watergirl wrapper: SDK ready, authorize, exchange the code through `/api/auth/discord/token`, authenticate, then call `setActivity`.
+- `src/worker.ts` provides the token exchange endpoint for Cloudflare Workers. Configure `DISCORD_CLIENT_SECRET` before deploying it.
 - Set the Discord Activity URL to the deployed static site root.
 
 ## Files
